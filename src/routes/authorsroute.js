@@ -21,7 +21,7 @@ authorsRouter.get("/addauthor", function (req, res) {
 authorsRouter.post("/add", function (req, res) {
   var item = {
     title: req.body.title,
-    image: req.body.images,
+    image: req.body.image, //part 2 no:8 error
     about: req.body.about,
   };
   console.log(item);

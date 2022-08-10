@@ -11,7 +11,7 @@ signupRouter.get('/',function(req,res){
 signupRouter.get("/adduser",function(req,res){
     
     var newuser = {
-        "uid":req.param("uid"),
+        "uid":req.param("uid"), //part2 no:10 error 
         "pwd":req.param("pwd")
     };
     console.log(newuser);

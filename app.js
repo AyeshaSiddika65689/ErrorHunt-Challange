@@ -1,30 +1,31 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-const bodyParser = require("body-parser"); //Part #1 typo error
+const bodyParser = require("body-parser"); //Part #1 typo error no:2 //
 
-const nav = [
-  {
-    link: "/books",
-    title: "Books",
-  },
-  {
-    link: "/authors",
-    title: "Authors",
-  },
-  {
-    link: "/addbook",
-    title: "Add Book",
-  },
-  {
-    link: "/addauthor",
-    title: "Add Author",
-  },
-];
+// part1 error no:4 //
+// const nav = [
+//   {
+//     link: "/books",
+//     title: "Books",
+//   },
+//   {
+//     link: "/authors",
+//     title: "Authors",
+//   },
+//   {
+//     link: "/addbook",
+//     title: "Add Book",
+//   },
+//   {
+//     link: "/addauthor",
+//     title: "Add Author",
+//   },
+// ];
 
 const loginRouter = require("./src/routes/loginroute");
 const signupRouter = require("./src/routes/signuproute");
-const homeRouter = require("./src/routes/homerouter"); //Part #1 Typo erroer
+const homeRouter = require("./src/routes/homerouter"); //Part #1 Typo erroer no: 3 //
 const booksRouter = require("./src/routes/booksroute");
 const authorsRouter = require("./src/routes/authorsroute");
 
@@ -45,11 +46,9 @@ app.use("/books", booksRouter);
 app.use("/authors", authorsRouter);
 
 app.get("/", function (req, res) {
-  res.render("index", {
-    nav, // part #2
-  });
+  res.render("index", { });
 });
 
 app.listen(5000, () => {
-  console.log("Server Ready on 5000"); //Part #1 Typo error
+  console.log("Server Ready on 5000"); //Part #1 Typo error no:4 
 });
